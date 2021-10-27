@@ -1,0 +1,70 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="es" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/estilos.css" rel="stylesheet" />
+    <title>Inicio | Pixar</title>
+    <link rel="icon" href="/icon.png">
+</head>
+<body class="index">
+    <header>
+        <nav class="menuHorizontal">
+            <a asp-action="Home">
+                <img id="logo" src="/images/Disney_pixar.png">
+            </a>
+            <ul>
+                <li class="">
+                    <a asp-action="Home">Inicio</a>
+                </li>
+                <li class="">
+                    <a asp-action="Peliculas">Películas</a>
+                </li>
+                <li class="">
+                    <a asp-action="Cortometrajes">Cortometrajes</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="https://www.facebook.com/DisneyPixarLatinoamerica/" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/DisneyPixar" target="_blank">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/user/DisneyPixar" target="_blank">
+                <i class="fa fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/pixar/" target="_blank">
+                <i class="fa fa-instagram"></i>
+            </a>
+
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="/Home">Inicio</a>
+                ·
+                <a href="/Peliculas">Películas</a>
+                ·
+                <a href="/Cortometrajes">Cortometrajes</a>
+            </p>
+
+            <p>&copy;Disney Pixar</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

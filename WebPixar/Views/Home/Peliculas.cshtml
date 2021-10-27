@@ -1,0 +1,20 @@
+﻿@model IEnumerable<PortadasViewModel>
+@{
+    ViewData["Title"] = "Peliculas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="pelis">
+    @foreach (var portada in Model)
+    {
+        <div>
+            <a class="imgPelicula" asp-action="Pelicula" asp-route-id="@portada.Id">
+                <img src="~/images/portadas/@portada.Portada" />
+            </a>
+        <div class="nombrePelicula">
+            <p>@portada.Nombre</p>
+        </div>
+        </div>
+    }
+</div>
+
